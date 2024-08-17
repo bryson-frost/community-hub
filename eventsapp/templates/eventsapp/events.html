@@ -1,0 +1,24 @@
+{% extends 'eventsapp/base.html' %}{% block title %}All Events{% endblock %}
+{% block content %}
+<div class="container">
+    <header>
+        <h1>Community Hub</h1>
+    </header>
+
+    <a href="{% url 'create_event' %}">Create Event</a>
+    <br>
+    <br>
+    <ul>
+        {% for event in events %}
+        <li class="eventCard">
+            <a href="event/{{event.id}}">
+                <div>
+                    <h3>{{event.title}}</h3>
+                    <h5>{{event.date}} @ {{event.time}}</h5>
+                </div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

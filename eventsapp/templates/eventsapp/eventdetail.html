@@ -1,0 +1,18 @@
+{% extends 'eventsapp/base.html' %}
+{% block title %}Event Details{% endblock %}
+{% block content %}
+<div class="container">
+    <header>
+        <h1>Event Details</h1>
+    </header>
+
+    <a href="{% url 'events_list' %}">&lt; Back to Events</a>
+
+    <div class="event_details">
+        <h2>{{ event.title }}</h2>
+        <p class="event_date">{{ event.date|date:"F j, Y" }} @ {{ event.time }}</p>
+        <p class="event_location">Location: {{ event.location }}</p>
+        <p class="event_description">{{ event.description }}</p>
+    </div>
+</div>
+{% endblock %}
