@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["https://events-community-hub-10a7662bcfbc.herokuapp.com/"]
+ALLOWED_HOSTS = ['https://events-community-hub-10a7662bcfbc.herokuapp.com/']
 
 
 # Application definition
